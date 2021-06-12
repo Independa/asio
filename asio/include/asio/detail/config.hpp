@@ -25,7 +25,6 @@
 #endif // !defined(ASIO_STANDALONE)
 
 // boostify: non-boost code ends here
-#if defined(ASIO_STANDALONE)
 # define ASIO_DISABLE_BOOST_ALIGN 1
 # define ASIO_DISABLE_BOOST_ARRAY 1
 # define ASIO_DISABLE_BOOST_ASSERT 1
@@ -37,11 +36,6 @@
 # define ASIO_DISABLE_BOOST_STATIC_CONSTANT 1
 # define ASIO_DISABLE_BOOST_THROW_EXCEPTION 1
 # define ASIO_DISABLE_BOOST_WORKAROUND 1
-#else // defined(ASIO_STANDALONE)
-# include <boost/config.hpp>
-# include <boost/version.hpp>
-# define ASIO_HAS_BOOST_CONFIG 1
-#endif // defined(ASIO_STANDALONE)
 
 // Default to a header-only implementation. The user must specifically request
 // separate compilation by defining either ASIO_SEPARATE_COMPILATION or
